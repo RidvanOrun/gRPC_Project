@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC_Client.Protos";
+
+package productGRPC;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service productGRPC {
+    rpc ByIds (ByIdsRequest) returns (ProductResponse);
+}
+message ByIdsRequest {
+	  google.protobuf.StringValue id = 1;  
+}
+
+message ProductResponse {
+   google.protobuf.StringValue id = 1; 
+    google.protobuf.StringValue Value =2;
+}
+
