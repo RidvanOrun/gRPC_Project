@@ -1,5 +1,3 @@
-# RabbitMQ and gRPC Basics
-
 ## gRPC
 
 gRPC is used for services to talk to each other **fast and easy**.
