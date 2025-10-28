@@ -1,17 +1,17 @@
-gRPC is used for synchronous communication between microservices
+# RabbitMQ and gRPC Basics
 
-For example:
+## gRPC
 
-You have an order service and a stock service.
+gRPC is used for services to talk to each other **fast and easy**.
 
-The order service wants to tell the stock service: “3 items were sold.”
+Example:  
+- You have an **order service** and a **stock service**.  
+- The order service says: “3 items were sold.”  
+- gRPC sends this message **quickly** and **with less data**.
 
-gRPC sends this message very quickly and with less data.
+**Why use gRPC?**  
+1. **Fast** – uses binary data, not JSON.  
+2. **Efficient** – sends smaller messages.  
+3. **Good for microservices** that talk to each other often.  
 
-Why use gRPC?
-
-It’s faster than normal APIs (because it uses binary data, not JSON).
-
-It’s more efficient — it sends smaller messages.
-
-It’s good for microservices that need to talk to each other often.
+gRPC is often used for **synchronous communication** between microservices.
